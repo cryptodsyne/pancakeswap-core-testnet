@@ -1,5 +1,5 @@
 {
-  "name": "@cryptodsyne-libs/pancake-swap-core",
+  "name": "@cryptodsyne/pancake-swap-core",
   "description": "🎛 Core contracts for the pancake protocol",
   "version": "0.1.0",
   "homepage": "https://pancake.cryptodsyne.com",
@@ -8,7 +8,7 @@
     "url": "https://github.com/cryptodsyne/pancake-swap-core-testnet.git"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org"
+    "access": "public"
   },
   "files": [
     "contracts",
@@ -35,11 +35,7 @@
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
-    "precompile": "yarn clean",
-    "compile": "waffle .waffle.json",
-    "pretest": "yarn compile",
-    "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "precompile": "yarn clean"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
